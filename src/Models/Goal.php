@@ -2,6 +2,8 @@
 
 namespace Ben182\AbTesting\Models;
 
+use Ben182\AbTesting\AbTestingFacade;
+use Ben182\AbTesting\Events\GoalCompleted;
 use Illuminate\Database\Eloquent\Model;
 
 class Goal extends Model
@@ -22,8 +24,13 @@ class Goal extends Model
         return $this->belongsTo(Experiment::class);
     }
 
-    public function incrementHit()
+    public function complete()
     {
+        if(AbTestingFacade::isCrawler()) {
+            return;
+        }
+
         $this->increment('hit');
+        event(new GoalCompleted($this));
     }
 }

@@ -80,8 +80,6 @@ class AbTesting
         $this->start();
         $this->setNextExperiment();
 
-        event(new ExperimentNewVisitor($this->getExperiment()));
-
         return $this->getExperiment();
     }
 
@@ -93,7 +91,7 @@ class AbTesting
     protected function setNextExperiment()
     {
         $next = $this->getNextExperiment();
-        $next->incrementVisitor();
+        $next->visit();
 
         session([
             self::SESSION_KEY_EXPERIMENT => $next,
@@ -151,8 +149,7 @@ class AbTesting
 
         session(self::SESSION_KEY_GOALS)->push($goal->id);
 
-        $goal->incrementHit();
-        event(new GoalCompleted($goal));
+        $goal->complete();
 
         return $goal;
     }
@@ -181,5 +178,16 @@ class AbTesting
         return session(self::SESSION_KEY_GOALS)->map(function ($goalId) {
             return Goal::find($goalId);
         });
+    }
+
+    /**
+     * Check if the current request is from a crawler or bot and config option is enabled
+     *
+     * @return bool
+     */
+    public function isCrawler()
+    {
+        return config('ab-testing.ignore_crawlers')
+            && (new CrawlerDetect)->isCrawler();
     }
 }

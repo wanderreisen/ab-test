@@ -1,9 +1,9 @@
 <?php
 
-namespace Ben182\AbTesting\Models;
+namespace Wanderreisen\AbTesting\Models;
 
-use Ben182\AbTesting\AbTestingFacade;
-use Ben182\AbTesting\Events\ExperimentNewVisitor;
+use Wanderreisen\AbTesting\AbTestingFacade;
+use Wanderreisen\AbTesting\Events\ExperimentNewVisitor;
 use Illuminate\Database\Eloquent\Model;
 
 class Experiment extends Model

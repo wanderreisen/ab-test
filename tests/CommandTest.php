@@ -1,11 +1,11 @@
 <?php
 
-namespace Ben182\AbTesting\Tests;
+namespace Wanderreisen\AbTesting\Tests;
 
-use Ben182\AbTesting\Models\Goal;
-use Ben182\AbTesting\AbTestingFacade;
-use Ben182\AbTesting\Models\Experiment;
-use Ben182\AbTesting\Commands\ReportCommand;
+use Wanderreisen\AbTesting\Models\Goal;
+use Wanderreisen\AbTesting\AbTestingFacade;
+use Wanderreisen\AbTesting\Models\Experiment;
+use Wanderreisen\AbTesting\Commands\ReportCommand;
 
 class CommandTest extends TestCase
 {

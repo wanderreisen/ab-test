@@ -1,9 +1,9 @@
 <?php
 
-namespace Ben182\AbTesting\Models;
+namespace Wanderreisen\AbTesting\Models;
 
-use Ben182\AbTesting\AbTestingFacade;
-use Ben182\AbTesting\Events\GoalCompleted;
+use Wanderreisen\AbTesting\AbTestingFacade;
+use Wanderreisen\AbTesting\Events\GoalCompleted;
 use Illuminate\Database\Eloquent\Model;
 
 class Goal extends Model

@@ -1,12 +1,12 @@
 <?php
 
-namespace Ben182\AbTesting;
+namespace Wanderreisen\AbTesting;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Ben182\AbTesting\Commands\ResetCommand;
-use Ben182\AbTesting\Commands\ReportCommand;
+use Wanderreisen\AbTesting\Commands\ResetCommand;
+use Wanderreisen\AbTesting\Commands\ReportCommand;
 
 class AbTestingServiceProvider extends ServiceProvider
 {

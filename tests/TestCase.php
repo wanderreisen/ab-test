@@ -1,10 +1,10 @@
 <?php
 
-namespace Ben182\AbTesting\Tests;
+namespace Wanderreisen\AbTesting\Tests;
 
-use Ben182\AbTesting\AbTestingFacade;
+use Wanderreisen\AbTesting\AbTestingFacade;
 use Illuminate\Support\Facades\Event;
-use Ben182\AbTesting\AbTestingServiceProvider;
+use Wanderreisen\AbTesting\AbTestingServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

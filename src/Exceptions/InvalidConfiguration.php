@@ -1,6 +1,6 @@
 <?php
 
-namespace Ben182\AbTesting\Exceptions;
+namespace Wanderreisen\AbTesting\Exceptions;
 
 use Exception;
 

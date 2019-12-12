@@ -1,12 +1,12 @@
 <?php
 
-namespace Ben182\AbTesting\Tests;
+namespace Wanderreisen\AbTesting\Tests;
 
-use Ben182\AbTesting\AbTesting;
-use Ben182\AbTesting\AbTestingFacade;
+use Wanderreisen\AbTesting\AbTesting;
+use Wanderreisen\AbTesting\AbTestingFacade;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Event;
-use Ben182\AbTesting\Events\ExperimentNewVisitor;
+use Wanderreisen\AbTesting\Events\ExperimentNewVisitor;
 
 class PageViewTest extends TestCase
 {
